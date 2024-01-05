@@ -1,5 +1,69 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<global::Models.Personel.Person>
+
 @{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
 }
+<li>
+    <ol>
+    </ol>
+</li>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Family</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Age</th>
+            <th scope="col">Grade</th>
+            <th scope="col">TitleEn</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            int counter = 1;
+            foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+
+
+                    <td lass="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" John> 
+                    <span class="caret"></span>>
+
+                        <ul class="dropdown-menu">
+                            @{
+                                foreach (var i in item.Emails)
+                                {
+                                    <li><a href="#">HTML</a>@i.EmailAddress</li>
+                                }
+                            }
+                        </ul>
+
+                    </td>
+
+
+
+
+
+
+                    @{
+                        foreach (var i in item.Telephones)
+                        {
+                            <td>@i.Number</td>
+                        }
+                    }
+                    <td>@item.Age</td>
+                    <td>@item.Grade</td>
+                    <td>@item.TitleEn</td>
+                </tr>
+                counter++;
+            }
+        }
+
+    </tbody>
+</table>

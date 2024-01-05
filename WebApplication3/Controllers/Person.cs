@@ -6,7 +6,10 @@ namespace WebApplication3.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+
+            var personelList = SampleData.Personel.GetPeople();
+            
+            return View(personelList);
         }
     }
 }
