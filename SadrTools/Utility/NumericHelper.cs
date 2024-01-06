@@ -1,68 +1,65 @@
-﻿using System;
+﻿namespace SadrTools.Utility;
 
-namespace SadrTools.Utility
+public static class NumericHelper
 {
-    public static class NumericHelper
+
+    // signed 
+    // unsigned
+
+    // signed bit سمت چپ ترین
+
+    // 1 1 1 1  1 1 1 1 (1+2+4+8+16+32+64+128) = 255
+    // 255- 128 = 127
+
+    public static ulong CalculateFactorial(byte number)
     {
 
-        // signed 
-        // unsigned
+        // 5! = 5*4*3*2*1
 
-        // signed bit سمت چپ ترین
+        ulong factorial = 1;
 
-        // 1 1 1 1  1 1 1 1 (1+2+4+8+16+32+64+128) = 255
-        // 255- 128 = 127
-
-        public static ulong CalculateFactorial(byte number)
+        for (byte i = 1; i <= number; i++)
         {
-
-            // 5! = 5*4*3*2*1
-
-            ulong factorial = 1;
-
-            for (byte i = 1; i <= number; i++)
-            {
-                factorial *= i;
-            }
-
-            return factorial;
+            factorial *= i;
         }
 
-        public static ulong CalculateFactorial_Recursive(byte number)
-        {
-            // 5! = 5 * 4!
+        return factorial;
+    }
 
-            // آدرس بازگشت در حافظه استک پشته ذخیره میشود
+    public static ulong CalculateFactorial_Recursive(byte number)
+    {
+        // 5! = 5 * 4!
 
-            // Stack - FILO - LIFO
+        // آدرس بازگشت در حافظه استک پشته ذخیره میشود
 
-            // QUEUE : FIFO - LILO - FCFS
+        // Stack - FILO - LIFO
 
-
-            // STACK OVERFLOW
-            if (number < 2)
-                return 1;
-
-            return number * CalculateFactorial_Recursive((byte)(number - 1));
+        // QUEUE : FIFO - LILO - FCFS
 
 
-            // تمرین : متد های دلخواه به روش بازگشتی 
+        // STACK OVERFLOW
+        if (number < 2)
+            return 1;
+
+        return number * CalculateFactorial_Recursive((byte)(number - 1));
 
 
-        }
+        // تمرین : متد های دلخواه به روش بازگشتی 
 
-        public static int GetRandom()
-        {
-            System.Threading.Thread.Sleep(10);
-            return new Random().Next();
-        }
-        public static int GetRandom(int max)
-        {
-            return new Random().Next(max + 1);
-        }
-        public static int GetRandom(int min, int max)
-        {
-            return new Random().Next(min, max);
-        }
+
+    }
+
+    public static int GetRandom()
+    {
+        Thread.Sleep(10);
+        return new Random().Next();
+    }
+    public static int GetRandom(int max)
+    {
+        return new Random().Next(max + 1);
+    }
+    public static int GetRandom(int min, int max)
+    {
+        return new Random().Next(min, max);
     }
 }
