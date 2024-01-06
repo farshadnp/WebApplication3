@@ -1,9 +1,10 @@
-﻿@model List<global::Models.Personel.Person>
+﻿@model List<Person>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
+<h2>@ViewData[StaticValues.ViewData.Title]</h2>
 <li>
     <ol>
     </ol>
@@ -32,7 +33,7 @@
                     <td>@item.LastName</td>
 
 
-                    <td lass="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" John> 
+                    <td class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" John> 
                     <span class="caret"></span>>
 
                         <ul class="dropdown-menu">

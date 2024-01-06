@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using SadrTools.Utility;
+using SampleData;
 namespace WebApplication3.Controllers
 {
     public class Person : Controller
@@ -7,8 +8,10 @@ namespace WebApplication3.Controllers
         public IActionResult Index()
         {
 
-            var personelList = SampleData.Personel.GetPeople();
-            
+            var personelList = Personel.GetPeople();
+
+            ViewData[StaticValues.ViewData.Title] = "My title is here";
+
             return View(personelList);
         }
     }
