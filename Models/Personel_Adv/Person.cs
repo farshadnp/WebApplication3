@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Models.Personel;
 using SadrTools.Extension;
+using SadrTools.Utility;
+
 namespace Models.Personel_Adv
 {
     /// <summary>
@@ -25,7 +27,7 @@ namespace Models.Personel_Adv
         /// </summary>
         public Person()
         {
-            ID = SadrTools.Utility.NumericHelper.GetRandom();
+            ID = NumericHelper.GetRandom();
 
             BirthDate = DateTime.Now;
             FirstName = "DEFAULT_NAME";

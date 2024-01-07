@@ -1,4 +1,5 @@
 ﻿using SadrTools.Extension;
+using SadrTools.Utility;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +13,7 @@ namespace Models.Shopping
     {
         public Order()
         {
-            ID = SadrTools.Utility.NumericHelper.GetRandom();
+            ID = NumericHelper.GetRandom();
             OrderDetails = new List<OrderDetail>();
             Note = "با تشکر از خرید شما";
         }

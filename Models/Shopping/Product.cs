@@ -1,10 +1,12 @@
-﻿namespace Models.Shopping
+﻿using SadrTools.Utility;
+
+namespace Models.Shopping
 {
     public class Product
     {
         public Product()
         {
-            ID = SadrTools.Utility.NumericHelper.GetRandom();
+            ID = NumericHelper.GetRandom();
         }
 
         public int ID { get; }

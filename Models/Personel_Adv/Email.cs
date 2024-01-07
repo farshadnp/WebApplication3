@@ -1,4 +1,5 @@
 ﻿using Models.Personel;
+using SadrTools.Utility;
 
 namespace Models.Personel_Adv
 {
@@ -17,7 +18,7 @@ namespace Models.Personel_Adv
         {
             get
             {
-                return SadrTools.Utility.NumericHelper.GetRandom();
+                return NumericHelper.GetRandom();
             }
         }
 

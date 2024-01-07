@@ -1,4 +1,6 @@
-﻿namespace Models.Personel_Adv
+﻿using SadrTools.Utility;
+
+namespace Models.Personel_Adv
 {
     /// <summary>
     /// موجودیت اطلاعات تماس
@@ -15,7 +17,7 @@
         {
             get
             {
-                return SadrTools.Utility.NumericHelper.GetRandom();
+                return NumericHelper.GetRandom();
             }
         }
 

@@ -1,4 +1,6 @@
-﻿namespace Models.Shopping
+﻿using SadrTools.Utility;
+
+namespace Models.Shopping
 {
     /// <summary>
     /// InvoiceItem اقلام فاکتور
@@ -7,7 +9,7 @@
     {
         public OrderDetail()
         {
-            ID = SadrTools.Utility.NumericHelper.GetRandom();
+            ID = NumericHelper.GetRandom();
         }
 
         public int ID { get; }

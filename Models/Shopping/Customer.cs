@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SadrTools.Utility;
+using System;
 
 namespace Models.Shopping
 {
@@ -11,7 +12,7 @@ namespace Models.Shopping
 
         public Customer(string fullName)
         {
-            ID = SadrTools.Utility.NumericHelper.GetRandom();
+            ID = NumericHelper.GetRandom();
             FullName = fullName;
         }
 

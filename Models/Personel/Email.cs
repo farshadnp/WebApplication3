@@ -1,4 +1,6 @@
-﻿namespace Models.Personel
+﻿using SadrTools.Utility;
+
+namespace Models.Personel
 {
     /// <summary>
     /// موجودیت اطلاعات تماس
@@ -7,7 +9,7 @@
     {
         public Email()
         {
-            ID = 0;
+            ID = NumericHelper.GetRandom(100,2000);
             EmailAddress = "test@test.ir";
             EmailProviderType = EnEmailProviderType.Other;
         }

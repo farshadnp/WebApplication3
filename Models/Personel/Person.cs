@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using SadrTools.Extension;
+using SadrTools.Utility;
+
 namespace Models.Personel
 {
     /// <summary>
@@ -25,7 +27,7 @@ namespace Models.Personel
         /// </summary>
         public Person()
         {
-            ID = int.MinValue;
+            ID = NumericHelper.GetRandom(800,15000);
             BirthDate = DateTime.Now;
             FirstName = "DEFAULT_NAME";
             LastName = "DEFAULT_FAMILY";

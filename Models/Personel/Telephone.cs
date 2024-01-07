@@ -1,4 +1,6 @@
-﻿namespace Models.Personel
+﻿using SadrTools.Utility;
+
+namespace Models.Personel
 {
     /// <summary>
     /// موجودیت اطلاعات تماس
@@ -8,7 +10,7 @@
 
         public Telephone()
         {
-            ID = 0;
+            ID = NumericHelper.GetRandom(); ;
             Number = "111111111";
             TelephoneType = EnTelephoneType.Other;
         }
