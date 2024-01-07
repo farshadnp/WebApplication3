@@ -1,0 +1,1 @@
+﻿Console.WriteLine(SadrTools.Utility.NumericHelper.CalculateFactorial(5));
