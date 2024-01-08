@@ -9,12 +9,18 @@ namespace Models.Personel
     {
         public Email()
         {
-            ID = NumericHelper.GetRandom(100,2000);
+            //ID = NumericHelper.GetRandom(100, 2000);
             EmailAddress = "test@test.ir";
             EmailProviderType = EnEmailProviderType.Other;
         }
 
-        public int ID { get; set; }
+        public int ID
+        {
+            get
+            {
+                return NumericHelper.GetRandom();
+            }
+        }
 
         public string EmailAddress { get; set; }
 

@@ -45,13 +45,15 @@
             // 
             // btnShow
             // 
-            btnShow.Font = new Font("IRAN Sans", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnShow.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnShow.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnShow.Location = new Point(648, 25);
             btnShow.Name = "btnShow";
             btnShow.Size = new Size(160, 52);
             btnShow.TabIndex = 1;
             btnShow.Text = "نمایش اطلاعات افراد";
             btnShow.UseVisualStyleBackColor = true;
+            btnShow.Click += btnShow_Click;
             // 
             // Form1
             // 

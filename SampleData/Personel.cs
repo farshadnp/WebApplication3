@@ -11,7 +11,7 @@ namespace SampleData
         {
             var person1 = new Basic.Person
             {
-                ID = 1,
+                
                 FirstName = "Soroush",
                 LastName = "Sadr",
                 Grade = 18.98,
@@ -22,13 +22,13 @@ namespace SampleData
                 {
                     new Basic.Email
                     {
-                         ID = 1,
+                         
                          EmailAddress = "soroush@yahoo.com",
                          EmailProviderType = Basic.EnEmailProviderType.Yahoo
                     },
                     new Basic.Email
                     {
-                         ID = 2,
+                         
                          EmailAddress = "soroush@microsoft.com",
                          EmailProviderType = Basic.EnEmailProviderType.Microsoft
                     },
@@ -37,7 +37,7 @@ namespace SampleData
                  {
                      new Basic.Telephone
                      {
-                         ID = 1 ,
+                         
                          Number = "09121212121",
                          TelephoneType = Basic.EnTelephoneType.Mobile
                      }
@@ -47,7 +47,6 @@ namespace SampleData
 
             var person2 = new Basic.Person
             {
-                ID = 2,
                 FirstName = "Ali",
                 LastName = "Alavi",
                 Grade = 18.98,
@@ -68,7 +67,6 @@ namespace SampleData
 
             var person3 = new Basic.Person
             {
-                ID = 3,
                 FirstName = "arezoo",
                 LastName = "Alavi",
                 Grade = 18.98,
@@ -79,7 +77,6 @@ namespace SampleData
                 {
                     new Basic.Email
                     {
-                        ID = 3 ,
                         EmailAddress = "arezoo@gmail.com",
                          EmailProviderType = Basic.EnEmailProviderType.Google
                     }

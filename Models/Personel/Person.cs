@@ -27,7 +27,7 @@ namespace Models.Personel
         /// </summary>
         public Person()
         {
-            ID = NumericHelper.GetRandom(800,15000);
+            //ID = NumericHelper.GetRandom(800,15000);
             BirthDate = DateTime.Now;
             FirstName = "DEFAULT_NAME";
             LastName = "DEFAULT_FAMILY";
@@ -42,18 +42,15 @@ namespace Models.Personel
 
         public Person(int id) : this()
         {
-            ID = id;
         }
 
         public Person(int id, string firstName) : this()
         {
-            ID = id;
             FirstName = firstName;
         }
 
         public Person(int id, string firstName, string lastName) : this()
         {
-            ID = id;
             FirstName = firstName;
             LastName = lastName;
         }
@@ -66,7 +63,6 @@ namespace Models.Personel
 
         public Person(int id, string firstName, string lastName, DateTime birthDate) : this()
         {
-            ID = id;
             BirthDate = birthDate;
             FirstName = firstName;
             LastName = lastName;
@@ -74,7 +70,6 @@ namespace Models.Personel
 
         public Person(int id, string firstName, string lastName, DateTime birthDate, string ssn) : this()
         {
-            ID = id;
             BirthDate = birthDate;
             FirstName = firstName;
             LastName = lastName;
@@ -93,7 +88,12 @@ namespace Models.Personel
 
         #region [ Property ]
 
-        public int ID { get; set; }
+        public int ID {
+            get
+            {
+                return NumericHelper.GetRandom();
+            }
+                }
 
 
         /// <summary>
