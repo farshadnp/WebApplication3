@@ -10,16 +10,14 @@ namespace Models.Personel_Adv
     {
         public Email()
         {
+            ID = NumericHelper.GetRandom();
             EmailAddress = "test@test.ir";
             EmailProviderType = EnEmailProviderType.Other;
         }
 
         public int ID
         {
-            get
-            {
-                return NumericHelper.GetRandom();
-            }
+            get;
         }
 
         public string EmailAddress { get; set; }

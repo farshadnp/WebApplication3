@@ -2,6 +2,7 @@
 using Adv = Models.Personel_Adv;
 using System;
 using System.Collections.Generic;
+using SadrTools.Utility;
 
 namespace SampleData
 {
@@ -95,11 +96,11 @@ namespace SampleData
         }
 
 
-        public static Adv.Person[] GetPeopleYasamin()
+        public static List<Adv.Person> GetPeopleYasamin()
         {
             var person1 = new Adv.Person
             {
-
+                
                 FirstName = "Soroush",
                 LastName = "Sadr",
                 Grade = 18.98,
@@ -167,7 +168,7 @@ namespace SampleData
                 }
             };
 
-            return new Adv.Person[] { person1, person2, person3 };
+            return new List<Adv.Person> { person1, person2, person3 };
 
         }
 

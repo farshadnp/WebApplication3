@@ -27,7 +27,7 @@ namespace Models.Personel
         /// </summary>
         public Person()
         {
-            ID = NumericHelper.GetRandom(800,15000);
+            ID = NumericHelper.GetRandom();
             BirthDate = DateTime.Now;
             FirstName = "DEFAULT_NAME";
             LastName = "DEFAULT_FAMILY";

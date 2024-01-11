@@ -9,16 +9,18 @@ namespace Models.Personel_Adv
     {
         public Telephone()
         {
+            ID = NumericHelper.GetRandom();
             Number = "111111111";
             TelephoneType = EnTelephoneType.Other;
         }
 
         public int ID
         {
-            get
-            {
-                return NumericHelper.GetRandom();
-            }
+            //get
+            //{
+            //    return NumericHelper.GetRandom();
+            //}
+            get;
         }
 
         public string Number { get; set; }

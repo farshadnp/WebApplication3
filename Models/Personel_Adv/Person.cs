@@ -89,7 +89,9 @@ namespace Models.Personel_Adv
         //}
 
 
-        public int ID { get; }
+        public int ID {
+            get;
+        }
 
 
         /// <summary>
