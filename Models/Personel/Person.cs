@@ -31,9 +31,9 @@ namespace Models.Personel
             BirthDate = DateTime.Now;
             FirstName = "DEFAULT_NAME";
             LastName = "DEFAULT_FAMILY";
-            SSN = "0000000000";
+            SSN = "5465654789";
             Gender = true;
-            Grade = 20.00;
+            Grade = NumericHelper.GetRandom(10,20);
 
             Emails = new List<Email>();
             Telephones = new List<Telephone>();

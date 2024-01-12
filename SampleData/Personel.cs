@@ -3,6 +3,7 @@ using Adv = Models.Personel_Adv;
 using System;
 using System.Collections.Generic;
 using SadrTools.Utility;
+using System.Security.Cryptography;
 
 namespace SampleData
 {
@@ -12,11 +13,11 @@ namespace SampleData
         {
             var person1 = new Basic.Person
             {
-                
+
                 FirstName = "Soroush",
                 LastName = "Sadr",
-                Grade = 18.98,
-                SSN = "1231231231",
+                //Grade = 18.98,
+                SSN = "1111222259",
                 BirthDate = new DateTime(1984, 1, 31),
                 Gender = true,
                 Emails = new List<Basic.Email>
@@ -50,8 +51,8 @@ namespace SampleData
             {
                 FirstName = "Ali",
                 LastName = "Alavi",
-                Grade = 18.98,
-                SSN = "1231231232",
+                //Grade = 18.98,
+                SSN = "4455770022",
                 BirthDate = new DateTime(2000, 1, 31),
                 Gender = true,
                 Telephones = new List<Basic.Telephone>
@@ -59,9 +60,21 @@ namespace SampleData
                      new Basic.Telephone
                      {
                          ID = 2 ,
-                         Number = "888111222",
+                         Number = "+989120000000",
                          TelephoneType = Basic.EnTelephoneType.Office
-                     }
+                     },
+                    new Basic.Telephone
+                     {
+                         ID = 4 ,
+                         Number = "+980212226458",
+                         TelephoneType = Basic.EnTelephoneType.Home
+                     },
+                    new Basic.Telephone
+                     {
+                         ID = 4 ,
+                         Number = "093339300000",
+                         TelephoneType = Basic.EnTelephoneType.Mobile
+                     },
                  }
 
             };
@@ -70,8 +83,8 @@ namespace SampleData
             {
                 FirstName = "arezoo",
                 LastName = "Alavi",
-                Grade = 18.98,
-                SSN = "1231231233",
+               //Grade = 18.98,
+                SSN = "1234567890",
                 BirthDate = new DateTime(2002, 1, 31),
                 Gender = false,
                 Emails = new List<Basic.Email>
@@ -80,13 +93,19 @@ namespace SampleData
                     {
                         EmailAddress = "arezoo@gmail.com",
                          EmailProviderType = Basic.EnEmailProviderType.Google
-                    }
+                    },
+                    new Basic.Email
+                    {
+                        EmailAddress = "arezo.Alavi55@live.com",
+                         EmailProviderType = Basic.EnEmailProviderType.Microsoft
+                    },
+
                 }
             };
 
             var people = new List<Basic.Person> { person1, person2, person3 };
 
-            people.Add(person1);
+            //people.Add(person1);
 
             return people;
 
@@ -101,7 +120,7 @@ namespace SampleData
                 FirstName = "Soroush",
                 LastName = "Sadr",
                 Grade = 18.98,
-                SSN = "1231231231",
+                SSN = "0012450098",
                 BirthDate = new DateTime(1984, 1, 31),
                 Gender = true,
                 Emails = new List<Adv.Email>
@@ -133,7 +152,7 @@ namespace SampleData
                 FirstName = "Ali",
                 LastName = "Alavi",
                 Grade = 18.98,
-                SSN = "1231231232",
+                SSN = "5555666600",
                 BirthDate = new DateTime(2000, 1, 31),
                 Gender = true,
                 Telephones = new List<Adv.Telephone>
@@ -152,7 +171,7 @@ namespace SampleData
                 FirstName = "arezoo",
                 LastName = "Alavi",
                 Grade = 18.98,
-                SSN = "1231231233",
+                SSN = "9999111155",
                 BirthDate = new DateTime(2002, 1, 31),
                 Gender = false,
                 Emails = new List<Adv.Email>

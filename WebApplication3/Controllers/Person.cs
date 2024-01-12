@@ -10,7 +10,7 @@ namespace WebApplication3.Controllers
 
             var personelList = Personel.GetPeople();
 
-            ViewData[StaticValues.ViewData.Title] = "My title is here";
+            //ViewData[StaticValues.ViewData.Title] = "My title is here";
 
             return View(personelList);
         }
